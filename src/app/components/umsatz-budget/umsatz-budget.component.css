@@ -1,0 +1,29 @@
+.content {
+  border: 1px solid darkgray;
+  box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+}
+button {
+  background-color: grey;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+button:hover,
+button.active {
+  background-color: #008CBA;
+  color: white;
+}
+.btn_jahr_quartal_month_week {
+  margin-bottom: 5px;
+}
+
+.umsatz_budget {
+  margin-bottom: 5px;
+}

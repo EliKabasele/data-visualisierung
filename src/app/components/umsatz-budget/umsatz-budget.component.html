@@ -1,0 +1,58 @@
+<div class="umsatz_budget"> UMSATZ UND BUDGET</div>
+<div class="content" style="width: 70%;">
+  <div class="btn_jahr_quartal_month_week">
+    <button (click)="activeTab('week')" [ngClass]="{'active': selectedTab === 'week'}">Woche</button>
+    <button (click)="activeTab('month')" [ngClass]="{'active': selectedTab === 'month'}">Monat</button>
+    <button (click)="activeTab('quartal')" [ngClass]="{'active': selectedTab === 'quartal'}">Quartal</button>
+    <button (click)="activeTab('year')" [ngClass]="{'active': selectedTab === 'year'}">Jahr</button>
+  </div>
+
+  <div style="width: 100%;" *ngIf="selectedTab === 'year'">
+    <canvas
+      baseChart
+      [chartType]=" 'line' "
+      [datasets]="jahrChartDaten"
+      [labels]="jahrChartLabels"
+      [options]="jahrChartOptions"
+      [legend]="true"
+      (chartHover)="onChartHover($event)">
+    </canvas>
+  </div>
+
+  <div style="width: 100%;" *ngIf="selectedTab === 'quartal'">
+    <canvas
+      baseChart
+      [chartType]=" 'line' "
+      [datasets]="quartalChartDaten"
+      [labels]="quartalChartLabels"
+      [options]="quartalChartOptions"
+      [legend]="true"
+      (chartHover)="onChartHover($event)">
+    </canvas>
+  </div>
+
+  <div style="width: 100%;" *ngIf="selectedTab === 'month'">
+    <canvas
+      baseChart
+      [chartType]=" 'line' "
+      [datasets]="monthChartDaten"
+      [labels]="monthChartLabels"
+      [options]="monthChartOptions"
+      [legend]="true"
+      (chartHover)="onChartHover($event)">
+    </canvas>
+  </div>
+
+  <div style="width: 100%;" *ngIf="selectedTab === 'week'">
+    <canvas
+      baseChart
+      [chartType]=" 'line' "
+      [datasets]="weekChartDaten"
+      [labels]="weekChartLabels"
+      [options]="weekChartOptions"
+      [legend]="true"
+      (chartHover)="onChartHover($event)">
+    </canvas>
+  </div>
+</div>
+
