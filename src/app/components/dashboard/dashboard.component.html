@@ -1,12 +1,12 @@
 
   <div style="padding-bottom: 3%">
-    <button>1. Alternative: <b>ng2-chart</b></button>
+    <button [routerLink]="['/ng2-charts']"  routerLinkActive="active">1. Alternative: <b>ng2-chart</b></button>
     <button>2. Alternative: <b>angular-chart</b></button>
-    <button>3. Alternative: <b>ngx-charts</b></button>
+    <button [routerLink]="['/ngx-chart']" routerLinkActive="active">3. Alternative: <b>ngx-charts</b></button>
   </div>
-  <div style="padding-bottom: 5%">
-    <app-umsatz-budget></app-umsatz-budget>
-  </div>
+
+  <router-outlet></router-outlet>
+
 
 
 

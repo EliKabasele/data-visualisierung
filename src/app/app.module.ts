@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { UmsatzBudgetComponent } from './components/umsatz-budget/umsatz-budget.component';
+import { NgxUmsatzBudgetComponent } from './ngx-chart/umsatz-budget/ngx-umsatz-budget.component';
+import { UmsatzBudgetComponent } from './ng2-chart/umsatz-budget/umsatz-budget.component';
 
 import { ChartsModule} from 'ng2-charts';
 
@@ -11,11 +13,22 @@ import { ChartsModule} from 'ng2-charts';
   declarations: [
     AppComponent,
     DashboardComponent,
-    UmsatzBudgetComponent
+    UmsatzBudgetComponent,
+    NgxUmsatzBudgetComponent
   ],
   imports: [
     BrowserModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule.forRoot([
+      {
+        path: 'ngx-chart',
+        component: NgxUmsatzBudgetComponent
+      },
+      {
+        path: 'ng2-charts',
+        component: UmsatzBudgetComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

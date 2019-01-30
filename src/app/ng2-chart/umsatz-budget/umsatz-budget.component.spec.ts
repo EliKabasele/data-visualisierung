@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UmsatzBudgetComponent } from './umsatz-budget.component';
 
-describe('UmsatzBudgetComponent', () => {
+describe('NgxUmsatzBudgetComponent', () => {
   let component: UmsatzBudgetComponent;
   let fixture: ComponentFixture<UmsatzBudgetComponent>;
 
