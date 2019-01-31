@@ -46,7 +46,7 @@
   <div style="width: 100%;" *ngIf="selectedTab === 'week'">
     <canvas
       baseChart
-      [chartType]=" 'line' "
+      [chartType]="chartType"
       [datasets]="weekChartDaten"
       [labels]="weekChartLabels"
       [options]="weekChartOptions"

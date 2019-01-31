@@ -39,11 +39,13 @@ export class UmsatzBudgetComponent implements OnInit {
     {
       data: JAHR_UMSAETZE,
       label: UMSATZ_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0},
     {
       data: JAHR_BUDGET,
       label: BUDGET_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0},
   ];
   jahrChartLabels = MONTHS;
 
@@ -64,11 +66,13 @@ export class UmsatzBudgetComponent implements OnInit {
     {
       data: QUARTAL_UMSAETZE,
       label: UMSATZ_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0},
     {
       data: QUARTAL_BUDGET,
       label: BUDGET_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0},
   ];
   quartalChartLabels = QUARTALS;
 
@@ -89,15 +93,18 @@ export class UmsatzBudgetComponent implements OnInit {
     {
       data: MONTH_UMSAETZE,
       label: UMSATZ_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0},
     {
       data: MONTH_BUDGET,
       label: BUDGET_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0},
   ];
   monthChartLabels = DAYS;
 
   // ---- Week Data -------------------------
+  chartType = 'bar';
   weekChartOptions = {
     responsive: true,
     scales: {
@@ -114,11 +121,16 @@ export class UmsatzBudgetComponent implements OnInit {
     {
       data: WEEK_UMSAETZE,
       label: UMSATZ_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0,
+      type: 'line'
+    },
     {
       data: WEEK_BUDGET,
       label: BUDGET_LABEL,
-      fill: false},
+      fill: false,
+      lineTension: 0,
+    },
   ];
   weekChartLabels = WEEK_DAYS;
 
